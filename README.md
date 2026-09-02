@@ -11,9 +11,9 @@ build step) seguindo a identidade visual da marca.
 | Verde (fundo escuro/títulos) | `#1b4330` |
 | Bege claro (fundo claro) | `#efe9d3` |
 
-**Fontes:** Calistoga (títulos), Poppins (corpo de texto) e Caveat (destaques
-manuscritos). Por padrão elas são carregadas via Google Fonts no
-`<head>` do `index.html`.
+**Fontes:** Calistoga (títulos) é auto-hospedada com o arquivo oficial da
+marca em `fonts/`. Poppins (corpo de texto) e Caveat (destaques manuscritos)
+são carregadas via Google Fonts no `<head>` do `index.html`.
 
 ## Estrutura
 
@@ -22,28 +22,41 @@ index.html        → estrutura da página (todas as seções)
 css/style.css      → design system, layout, responsivo e animações
 js/script.js       → menu mobile, header on-scroll, reveal on-scroll, FAQ, formulário
 img/               → ilustrações e ícones (atualmente SVGs desenhados à mão para preencher o layout)
-fonts/             → pasta pronta para fontes auto-hospedadas (opcional)
+fonts/             → Calistoga-Regular (.woff2 + .ttf, auto-hospedada)
 ```
 
-## Como trocar pelas imagens/fontes reais
+## Como trocar pelas imagens reais
 
 O layout está 100% funcional com ilustrações em SVG (estilo line art) nas
-cores da marca, só pra já deixar a página completa e navegável. Para usar
-os arquivos reais de vocês:
+cores da marca, só pra já deixar a página completa e navegável até vocês
+mandarem as imagens de verdade. Como o upload é limitado a poucas imagens
+por mensagem, o mais rápido é ir mandando aos poucos — em cada mensagem,
+já diz pra qual ilustração é cada uma (ex: "essa é a do hero", "essa é a
+da seção de benefícios") que eu vou substituindo aos poucos:
 
-1. **Imagens/ilustrações**: mande os arquivos (PNG/SVG/WebP) que eu troco
-   cada ilustração (hero, seção "a gente se importa", benefícios, FAQ etc.)
-   pelos arquivos reais em `img/`.
-2. **Fontes**: se vocês tiverem os arquivos das fontes (Calistoga, Poppins,
-   Caveat) para hospedar localmente em vez de usar o Google Fonts, é só
-   mandar os `.woff2` que eu adiciono em `fonts/` e ajusto o `@font-face`
-   no `style.css`.
-3. **Redes sociais / WhatsApp**: os links do rodapé (`Instagram`,
-   `WhatsApp`, `E-mail`) estão com placeholders — me passem os links/telefone
-   reais para eu atualizar.
-4. **Formulário de contato**: o formulário final está com um placeholder de
-   envio (`js/script.js`). Me digam se querem integrar com e-mail, WhatsApp,
-   Google Sheets, CRM etc. para eu conectar de verdade.
+1. Hero (laptop + olho)
+2. "A gente se importa de verdade" (ilustração ao lado do texto)
+3. Benefícios (laptop + megafone)
+4. FAQ (lupa)
+5. Cases (3 thumbnails)
+6. Ícones dos 4 cards de "não é simples" e dos 6 cards de serviços (se
+   tiverem versão própria — hoje são ícones de linha simples)
+
+Pode mandar em PNG, SVG ou WebP, do jeito que tiver.
+
+## Já atualizado com dados reais
+
+- Instagram: [@auge.cs](https://instagram.com/auge.cs)
+- TikTok: [@auge.cs](https://tiktok.com/@auge.cs)
+- WhatsApp: (48) 99246-9043
+- E-mail: augecreativestudio@gmail.com
+
+## Pendente
+
+**Formulário de contato**: o formulário final está com um placeholder de
+envio (`js/script.js`) — só mostra uma mensagem de confirmação, não envia
+pra lugar nenhum ainda. Me digam se querem integrar com e-mail, WhatsApp,
+Google Sheets, CRM etc. para eu conectar de verdade.
 
 ## Rodando localmente
 

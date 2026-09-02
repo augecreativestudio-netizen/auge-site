@@ -4,6 +4,17 @@
    Fontes: Calistoga (display) · Poppins (corpo) · Caveat (destaque)
    ========================================================= */
 
+/* Calistoga auto-hospedada (arquivo oficial da marca em /fonts).
+   Poppins e Caveat continuam vindo do Google Fonts (ver index.html). */
+@font-face {
+  font-family: "Calistoga";
+  src: url("../fonts/Calistoga-Regular.woff2") format("woff2"),
+       url("../fonts/Calistoga-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --brown: #a75f1e;
   --brown-dark: #8a4c17;
@@ -574,7 +585,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   gap: 20px;
 }
 .site-footer .brand-mark, .site-footer .brand-name { color: var(--beige); }
-.footer-social { display: flex; gap: 26px; }
+.footer-social { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 26px; }
 .footer-social a {
   display: flex; align-items: center; gap: 8px;
   font-size: 0.9rem;
