@@ -25,21 +25,33 @@ img/               → ilustrações e ícones (atualmente SVGs desenhados à m�
 fonts/             → Calistoga-Regular (.woff2 + .ttf, auto-hospedada)
 ```
 
-## Como trocar pelas imagens reais
+## Imagens reais já aplicadas
 
-O layout está 100% funcional com ilustrações em SVG (estilo line art) nas
-cores da marca, só pra já deixar a página completa e navegável até vocês
-mandarem as imagens de verdade. Como o upload é limitado a poucas imagens
-por mensagem, o mais rápido é ir mandando aos poucos — em cada mensagem,
-já diz pra qual ilustração é cada uma (ex: "essa é a do hero", "essa é a
-da seção de benefícios") que eu vou substituindo aos poucos:
+- **Hero** (laptop + olho) → `img/hero-laptop-eye.png`
+- **"A gente se importa de verdade"** → aperto de mãos como imagem
+  principal (`img/care-handshake.png`), com o gesto de mão
+  (`img/care-hand-snap.png`) e as moedas (`img/care-coins.png`) flutuando
+  ao redor, no mesmo estilo do hero
+- **CTA final** (megafone) → `img/cta-megaphone.png`
 
-1. Hero (laptop + olho)
-2. "A gente se importa de verdade" (ilustração ao lado do texto)
-3. Benefícios (laptop + megafone)
-4. FAQ (lupa)
-5. Cases (3 thumbnails)
-6. Ícones dos 4 cards de "não é simples" e dos 6 cards de serviços (se
+Cada uma tem uma versão `.webp` gerada automaticamente (bem mais leve) que
+carrega primeiro via `<picture>`, com o `.png` original como fallback.
+
+## Como trocar pelas imagens que ainda faltam
+
+O restante do layout está com ilustrações em SVG (estilo line art) nas
+cores da marca, só pra já deixar a página completa e navegável. Como o
+upload é limitado a poucas imagens por mensagem, o mais rápido é ir
+mandando aos poucos — em cada mensagem, já diz pra qual ilustração é cada
+uma. **Importante**: mande como anexo/arquivo (não colado direto na
+mensagem), senão eu só consigo ver a imagem, não salvar o arquivo.
+
+Ainda faltam:
+
+1. Benefícios (ilustração ao lado da lista "o que você ganha")
+2. FAQ (lupa)
+3. Cases (3 thumbnails)
+4. Ícones dos 4 cards de "não é simples" e dos 6 cards de serviços (se
    tiverem versão própria — hoje são ícones de linha simples)
 
 Pode mandar em PNG, SVG ou WebP, do jeito que tiver.

@@ -76,27 +76,10 @@
       </div>
 
       <div class="hero-art reveal" aria-hidden="true">
-        <svg class="float-slow" width="120" height="46" viewBox="0 0 120 46" fill="none" style="position:absolute; top:-10px; left:10%;">
-          <rect x="4" y="30" width="70" height="9" rx="4" transform="rotate(-18 4 30)" fill="var(--brown)"/>
-          <rect x="30" y="4" width="70" height="9" rx="4" transform="rotate(20 30 4)" fill="var(--green)"/>
-        </svg>
-
-        <div class="laptop">
-          <div class="laptop-screen">
-            <svg viewBox="0 0 200 140" width="100%" height="100%">
-              <rect x="4" y="4" width="192" height="132" rx="10" fill="var(--beige)"/>
-              <path d="M20 70C40 40 70 30 100 30C130 30 160 40 180 70C160 100 130 110 100 110C70 110 40 100 20 70Z" fill="none" stroke="var(--ink)" stroke-width="3"/>
-              <circle cx="100" cy="70" r="26" fill="var(--green)"/>
-              <circle cx="108" cy="62" r="7" fill="var(--beige)"/>
-            </svg>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-
-        <svg class="float-fast" width="90" height="70" viewBox="0 0 90 70" fill="none" style="position:absolute; bottom:0; right:0;">
-          <rect x="6" y="6" width="10" height="58" rx="3" fill="var(--brown)" transform="rotate(15 6 6)"/>
-          <rect x="40" y="0" width="10" height="58" rx="3" fill="var(--green)" transform="rotate(-8 40 0)"/>
-        </svg>
+        <picture class="hero-illustration float-slow">
+          <source srcset="img/hero-laptop-eye.webp" type="image/webp">
+          <img src="img/hero-laptop-eye.png" alt="" width="1298" height="1054" loading="eager">
+        </picture>
       </div>
     </div>
   </section>
@@ -163,12 +146,18 @@
         </p>
 
         <div class="care-art reveal" aria-hidden="true">
-          <svg width="220" height="150" viewBox="0 0 220 150" fill="none">
-            <circle cx="110" cy="75" r="70" fill="var(--beige)" opacity="0.08"/>
-            <path d="M60 100c10-30 30-50 50-50s40 20 50 50" stroke="var(--beige)" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <circle cx="110" cy="60" r="18" fill="var(--brown)"/>
-            <path d="M70 120c14-10 96-10 110 0" stroke="var(--beige)" stroke-width="3" stroke-linecap="round"/>
-          </svg>
+          <picture class="care-handshake">
+            <source srcset="img/care-handshake.webp" type="image/webp">
+            <img src="img/care-handshake.png" alt="" width="503" height="222" loading="lazy">
+          </picture>
+          <picture class="care-accent care-accent-coins float-slow">
+            <source srcset="img/care-coins.webp" type="image/webp">
+            <img src="img/care-coins.png" alt="" width="240" height="231" loading="lazy">
+          </picture>
+          <picture class="care-accent care-accent-hand float-fast">
+            <source srcset="img/care-hand-snap.webp" type="image/webp">
+            <img src="img/care-hand-snap.png" alt="" width="281" height="231" loading="lazy">
+          </picture>
         </div>
       </div>
 
@@ -422,10 +411,10 @@
   <!-- ============ CTA FINAL ============ -->
   <section class="section final-cta dark-panel" id="contato">
     <div class="container final-cta-inner">
-      <svg class="cta-flag float-slow" width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <path d="M14 8v44" stroke="var(--brown)" stroke-width="4" stroke-linecap="round"/>
-        <path d="M14 10l30 8-30 8z" fill="var(--brown)"/>
-      </svg>
+      <picture class="cta-megaphone float-slow">
+        <source srcset="img/cta-megaphone.webp" type="image/webp">
+        <img src="img/cta-megaphone.png" alt="" width="572" height="572" loading="lazy">
+      </picture>
 
       <h2 class="section-title light">
         Vamos levar<br>
