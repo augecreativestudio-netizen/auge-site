@@ -33,26 +33,33 @@ fonts/             → Calistoga-Regular (.woff2 + .ttf, auto-hospedada)
   (`img/care-hand-snap.png`) e as moedas (`img/care-coins.png`) flutuando
   ao redor, no mesmo estilo do hero
 - **CTA final** (megafone) → `img/cta-megaphone.png`
+- **4 ícones de "não é simples"**: `img/problem-time.png`,
+  `img/problem-invest.png`, `img/problem-direction.png`,
+  `img/problem-support.png`
+- **6 ícones de serviços**: `img/service-social.png`,
+  `img/service-ads.png`, `img/service-sites.png`,
+  `img/service-branding.png`, `img/service-copywriting.png`,
+  `img/service-consulting.png`
+- **Benefícios**: laptop com o olho da marca como imagem principal
+  (`img/benefits-laptop.png`), com o megafone
+  (`img/benefits-megaphone.png`) e o punho (`img/benefits-fist.png`)
+  flutuando ao redor
+- **FAQ** (lupa) → `img/faq-magnifier.png`
+- **Check dos benefícios** → `img/check-badge.png`
+- **Sparkle decorativo** perto do título "O que fazemos?" →
+  `img/sparkle.png`
 
 Cada uma tem uma versão `.webp` gerada automaticamente (bem mais leve) que
 carrega primeiro via `<picture>`, com o `.png` original como fallback.
 
-## Como trocar pelas imagens que ainda faltam
+## O que ainda falta
 
-O restante do layout está com ilustrações em SVG (estilo line art) nas
-cores da marca, só pra já deixar a página completa e navegável. Como o
-upload é limitado a poucas imagens por mensagem, o mais rápido é ir
-mandando aos poucos — em cada mensagem, já diz pra qual ilustração é cada
-uma. **Importante**: mande como anexo/arquivo (não colado direto na
+Como o upload é limitado a poucas imagens por mensagem, o mais rápido é
+ir mandando aos poucos — em cada mensagem, já diz pra qual ilustração é
+cada uma. **Importante**: mande como anexo/arquivo (não colado direto na
 mensagem), senão eu só consigo ver a imagem, não salvar o arquivo.
 
-Ainda faltam:
-
-1. Benefícios (ilustração ao lado da lista "o que você ganha")
-2. FAQ (lupa)
-3. Cases (3 thumbnails)
-4. Ícones dos 4 cards de "não é simples" e dos 6 cards de serviços (se
-   tiverem versão própria — hoje são ícones de linha simples)
+1. Fotos/thumbnails dos 3 cases (hoje é um placeholder listrado)
 
 Pode mandar em PNG, SVG ou WebP, do jeito que tiver.
 
