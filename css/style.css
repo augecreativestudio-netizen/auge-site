@@ -199,7 +199,8 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   gap: 8px;
   flex-shrink: 0;
 }
-.brand-mark { color: var(--green); display: inline-flex; }
+.brand-mark { display: inline-flex; }
+.brand-mark img { height: 26px; width: auto; display: block; }
 .brand-name {
   font-family: var(--font-display);
   font-size: 1.5rem;
