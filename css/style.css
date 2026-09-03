@@ -139,31 +139,27 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .title-sparkle { position: absolute; top: -34px; right: -46px; width: 34px; display: block; }
 .title-sparkle img { width: 100%; height: auto; }
 
-.highlight {
-  font-family: var(--font-accent);
+/* Destaques: mesma fonte do texto ao redor (sem trocar pra outra
+   família), só a cor marrom + um sublinhado estilo brush (pincelada
+   irregular, não uma barra reta). */
+.highlight, .underline-accent {
   font-style: normal;
   color: var(--brown);
-  font-size: 1.15em;
-  position: relative;
-}
-.underline-accent {
-  font-family: var(--font-accent);
-  color: var(--brown-light);
   position: relative;
   display: inline-block;
 }
-.underline-accent::after {
+.highlight::after, .underline-accent::after {
   content: "";
   position: absolute;
-  left: 2%;
-  right: 2%;
-  bottom: -6px;
-  height: 6px;
-  background: var(--brown);
-  border-radius: 4px;
+  left: -3%;
+  right: -3%;
+  bottom: -0.18em;
+  height: 0.34em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 24' preserveAspectRatio='none'%3E%3Cpath d='M3,15 C8,6 20,4 40,6 C65,8 85,12 110,9 C135,6 160,4 185,8 C192,9 197,12 197,15 C197,18 192,20 185,19 C160,23 135,21 110,18 C85,15 65,19 40,21 C20,23 8,21 3,18 C1,17 1,16 3,15 Z' fill='%23a75f1e'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
   transform: scaleX(0);
   transform-origin: left;
-  animation: draw-underline 1s var(--ease) .4s forwards;
+  animation: draw-underline .9s var(--ease) .35s forwards;
+  pointer-events: none;
 }
 @keyframes draw-underline { to { transform: scaleX(1); } }
 
@@ -257,7 +253,6 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   color: var(--green);
   line-height: 1.08;
 }
-.hero-sub { font-size: 0.85em; }
 .lead {
   margin-top: 22px;
   max-width: 46ch;
@@ -341,30 +336,19 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 }
 .dark-panel .container { position: relative; }
 
-.care-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: center;
-  margin-top: 44px;
+.care-text {
+  max-width: 700px;
+  margin: 44px auto 0;
+  text-align: center;
+  font-size: 1.05rem;
+  opacity: 0.92;
 }
-.care-text { font-size: 1.05rem; opacity: 0.92; }
-.care-art { position: relative; display: flex; justify-content: center; align-items: center; min-height: 260px; }
-.care-handshake {
-  width: min(360px, 90%);
-  filter: drop-shadow(0 16px 30px rgba(0,0,0,0.35));
-}
-.care-handshake img { width: 100%; height: auto; }
-.care-accent { position: absolute; width: 96px; }
-.care-accent img { width: 100%; height: auto; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.3)); }
-.care-accent-coins { top: -18px; left: 4%; width: 88px; }
-.care-accent-hand { bottom: -22px; right: 2%; width: 108px; }
 
 .badges-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-  margin-top: 56px;
+  margin-top: 48px;
 }
 .badge-card {
   background: rgba(239,233,211,0.06);
@@ -378,10 +362,18 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   background: rgba(239,233,211,0.1);
   border-color: var(--brown-light);
 }
-.badge-num {
-  font-family: var(--font-display);
-  color: var(--brown-light);
-  font-size: 1.3rem;
+.badge-icon {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  margin-bottom: 16px;
+}
+.badge-icon img {
+  height: 52px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
 }
 .badge-card h3 {
   font-family: var(--font-body);
@@ -610,9 +602,6 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   .hero-inner { padding: 32px 32px 40px; }
   .cards-grid.four { grid-template-columns: repeat(2, 1fr); }
   .cards-grid.three { grid-template-columns: repeat(2, 1fr); }
-  .care-grid { grid-template-columns: 1fr; text-align: center; }
-  .care-text { margin-inline: auto; }
-  .care-art { margin-top: 30px; }
   .badges-row { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .benefits-art { order: -1; }
@@ -658,7 +647,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .float-slow, .float-fast, .underline-accent::after {
+  .reveal, .float-slow, .float-fast, .highlight::after, .underline-accent::after {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
