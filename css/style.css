@@ -167,18 +167,24 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 }
 @keyframes draw-underline { to { transform: scaleX(1); } }
 
-/* ============ CARTÃO HEADER + HERO ============
-   Header e hero vivem dentro de um único cartão arredondado que
-   flutua sobre o fundo da página (em vez de um header fixo de ponta
-   a ponta) — como na referência visual. */
-.top-card-wrap { padding: 22px 22px 0; }
-.top-card {
+/* ============ HEADER + HERO ============
+   Header e hero são dois cartões arredondados separados, flutuando
+   sobre o fundo da página — como na referência visual. */
+.top-card-wrap {
+  padding: 22px 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.header-card, .hero-card {
+  width: 100%;
   max-width: 1180px;
   margin-inline: auto;
   background: var(--beige);
-  border-radius: 40px;
   box-shadow: var(--shadow-sm);
 }
+.header-card { border-radius: var(--radius-pill); }
+.hero-card { border-radius: 40px; }
 
 /* ============ HEADER ============ */
 .site-header { display: block; position: relative; z-index: 20; }
@@ -187,7 +193,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 22px 32px;
+  padding: 14px 32px;
 }
 .brand {
   display: flex;
@@ -260,11 +266,18 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 }
 .hero-copy .btn { margin-top: 32px; }
 
-.hero-art { position: relative; display: flex; justify-content: center; }
+.hero-art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* deixa a ilustração "vazar" pra fora do cartão do hero, dando
+     uma sensação de profundidade/3D */
+  margin: -68px -64px -32px 0;
+}
 .hero-illustration img {
-  width: min(480px, 100%);
+  width: min(500px, 100%);
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(27, 67, 48, 0.18));
+  filter: drop-shadow(0 24px 34px rgba(27, 67, 48, 0.28));
 }
 
 .float-slow { animation: float 6s ease-in-out infinite; }
@@ -593,7 +606,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero-copy .lead { margin-inline: auto; }
-  .hero-art { order: -1; margin-bottom: 20px; }
+  .hero-art { order: -1; margin: -20px -10px 12px; }
   .hero-inner { padding: 32px 32px 40px; }
   .cards-grid.four { grid-template-columns: repeat(2, 1fr); }
   .cards-grid.three { grid-template-columns: repeat(2, 1fr); }
