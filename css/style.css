@@ -155,7 +155,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   right: -3%;
   bottom: -0.18em;
   height: 0.34em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 24' preserveAspectRatio='none'%3E%3Cpath d='M3,15 C8,6 20,4 40,6 C65,8 85,12 110,9 C135,6 160,4 185,8 C192,9 197,12 197,15 C197,18 192,20 185,19 C160,23 135,21 110,18 C85,15 65,19 40,21 C20,23 8,21 3,18 C1,17 1,16 3,15 Z' fill='%23a75f1e'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 40' preserveAspectRatio='none'%3E%3Cpath d='M2,15.4 L21.8,13.1 L41.7,12.9 L61.5,13.7 L81.4,13.7 L101.2,11.9 L121,12.8 L140.9,12.5 L160.7,12.7 L180.6,14 L200.4,13.6 L220.2,12.6 L240.1,14 L259.9,13.8 L279.8,14.4 L299.6,12.9 L319.4,13.2 L339.3,11.9 L359.1,13.1 L379,13.6 L398.8,14 L418.6,13.6 L438.5,14.2 L458.3,13.4 L478.2,13.8 L498,15.4 L498,26.3 L478.2,29.6 L458.3,27.9 L438.5,29.8 L418.6,28.8 L398.8,28.5 L379,29.5 L359.1,28 L339.3,28.9 L319.4,28.9 L299.6,29.3 L279.8,28.8 L259.9,28.3 L240.1,28.2 L220.2,27.1 L200.4,28.4 L180.6,28 L160.7,27.4 L140.9,29.3 L121,29.1 L101.2,29.7 L81.4,29 L61.5,27 L41.7,28 L21.8,28.1 L2,26 Z' fill='%23a75f1e'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
   transform: scaleX(0);
   transform-origin: left;
   animation: draw-underline .9s var(--ease) .35s forwards;
