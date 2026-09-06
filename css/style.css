@@ -535,9 +535,9 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .faq-body { position: relative; margin-top: 36px; }
 .faq-detail {
   position: absolute;
-  top: -34px;
-  right: 4%;
-  width: 260px;
+  top: -132px;
+  right: 6%;
+  width: 170px;
   z-index: 0;
   display: block;
 }
@@ -582,7 +582,16 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 /* ============ FINAL CTA ============ */
 .final-cta { text-align: center; padding-top: 90px; }
 .final-cta-inner { max-width: 640px; margin-inline: auto; position: relative; }
-.cta-megaphone { display: block; position: absolute; top: -70px; left: -60px; width: 110px; }
+.cta-megaphone {
+  display: block;
+  position: absolute;
+  top: -118px;
+  left: 50%;
+  /* centraliza com margin (não transform) pra não brigar com a
+     animação de flutuar, que já usa transform */
+  margin-left: -75px;
+  width: 150px;
+}
 .cta-megaphone img { width: 100%; height: auto; filter: drop-shadow(0 12px 22px rgba(0,0,0,0.35)); }
 .final-cta .section-title { margin-top: 10px; }
 .final-cta p { margin-top: 18px; opacity: 0.88; font-size: 1.05rem; }
