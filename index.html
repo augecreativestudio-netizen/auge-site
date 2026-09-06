@@ -61,12 +61,12 @@
         <div class="hero-copy reveal">
           <h1 class="display">
             Publicidade<br>
-            <span class="hero-sub">pensada para <em class="highlight">SEU</em> negócio</span>
+            pensada para<br>
+            <span class="hero-sub"><em class="highlight">SEU</em> negócio</span>
           </h1>
           <p class="lead">
             Na Auge nos dedicamos a entender de verdade cada cliente antes de criar
-            qualquer estratégia.<br>
-            <strong>Isso muda o resultado.</strong>
+            qualquer estratégia.
           </p>
           <a href="#contato" class="btn btn-primary">
             Quero uma proposta personalizada
@@ -226,48 +226,93 @@
         O que <span class="text-brown">fazemos</span>?
       </h2>
 
-      <div class="cards-grid three reveal">
-        <div class="service-card beige">
-          <span class="service-icon">
-            <picture><source srcset="img/service-social.webp" type="image/webp"><img src="img/service-social.png" alt="" width="30" height="30" loading="lazy"></picture>
-          </span>
-          <h3>Gestão de redes sociais</h3>
-          <p>Conteúdo estratégico, não só "bonitinho".</p>
-        </div>
-        <div class="service-card brown">
-          <span class="service-icon">
-            <picture><source srcset="img/service-ads.webp" type="image/webp"><img src="img/service-ads.png" alt="" width="30" height="30" loading="lazy"></picture>
-          </span>
-          <h3>Tráfego pago</h3>
-          <p>Anúncios que geram cliente, não só curtida.</p>
-        </div>
-        <div class="service-card beige">
-          <span class="service-icon">
-            <picture><source srcset="img/service-sites.webp" type="image/webp"><img src="img/service-sites.png" alt="" width="30" height="30" loading="lazy"></picture>
-          </span>
-          <h3>Sites e landing pages</h3>
-          <p>Presença digital que converte visita em venda.</p>
-        </div>
-        <div class="service-card brown">
-          <span class="service-icon">
-            <picture><source srcset="img/service-branding.webp" type="image/webp"><img src="img/service-branding.png" alt="" width="30" height="30" loading="lazy"></picture>
-          </span>
-          <h3>Identidade visual e branding</h3>
-          <p>Uma marca que as pessoas lembram.</p>
-        </div>
-        <div class="service-card beige">
-          <span class="service-icon">
-            <picture><source srcset="img/service-copywriting.webp" type="image/webp"><img src="img/service-copywriting.png" alt="" width="30" height="30" loading="lazy"></picture>
-          </span>
-          <h3>Copywriting</h3>
-          <p>Textos que vendem sem parecer que estão vendendo.</p>
-        </div>
-        <div class="service-card brown">
-          <span class="service-icon">
-            <picture><source srcset="img/service-consulting.webp" type="image/webp"><img src="img/service-consulting.png" alt="" width="30" height="30" loading="lazy"></picture>
-          </span>
-          <h3>Consultoria de publicidade</h3>
-          <p>Direção pra quem não sabe por onde começar.</p>
+      <div class="services-marquee reveal">
+        <div class="services-track">
+          <div class="service-card beige">
+            <span class="service-icon">
+              <picture><source srcset="img/service-social.webp" type="image/webp"><img src="img/service-social.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Gestão de redes sociais</h3>
+            <p>Conteúdo estratégico, não só "bonitinho".</p>
+          </div>
+          <div class="service-card brown">
+            <span class="service-icon">
+              <picture><source srcset="img/service-ads.webp" type="image/webp"><img src="img/service-ads.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Tráfego pago</h3>
+            <p>Anúncios que geram cliente, não só curtida.</p>
+          </div>
+          <div class="service-card beige">
+            <span class="service-icon">
+              <picture><source srcset="img/service-sites.webp" type="image/webp"><img src="img/service-sites.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Sites e landing pages</h3>
+            <p>Presença digital que converte visita em venda.</p>
+          </div>
+          <div class="service-card brown">
+            <span class="service-icon">
+              <picture><source srcset="img/service-branding.webp" type="image/webp"><img src="img/service-branding.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Identidade visual e branding</h3>
+            <p>Uma marca que as pessoas lembram.</p>
+          </div>
+          <div class="service-card beige">
+            <span class="service-icon">
+              <picture><source srcset="img/service-copywriting.webp" type="image/webp"><img src="img/service-copywriting.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Copywriting</h3>
+            <p>Textos que vendem sem parecer que estão vendendo.</p>
+          </div>
+          <div class="service-card brown">
+            <span class="service-icon">
+              <picture><source srcset="img/service-consulting.webp" type="image/webp"><img src="img/service-consulting.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Consultoria de publicidade</h3>
+            <p>Direção pra quem não sabe por onde começar.</p>
+          </div>
+          <!-- cópia duplicada, oculta de leitores de tela, pra criar o loop contínuo -->
+          <div class="service-card beige" aria-hidden="true">
+            <span class="service-icon">
+              <picture><source srcset="img/service-social.webp" type="image/webp"><img src="img/service-social.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Gestão de redes sociais</h3>
+            <p>Conteúdo estratégico, não só "bonitinho".</p>
+          </div>
+          <div class="service-card brown" aria-hidden="true">
+            <span class="service-icon">
+              <picture><source srcset="img/service-ads.webp" type="image/webp"><img src="img/service-ads.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Tráfego pago</h3>
+            <p>Anúncios que geram cliente, não só curtida.</p>
+          </div>
+          <div class="service-card beige" aria-hidden="true">
+            <span class="service-icon">
+              <picture><source srcset="img/service-sites.webp" type="image/webp"><img src="img/service-sites.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Sites e landing pages</h3>
+            <p>Presença digital que converte visita em venda.</p>
+          </div>
+          <div class="service-card brown" aria-hidden="true">
+            <span class="service-icon">
+              <picture><source srcset="img/service-branding.webp" type="image/webp"><img src="img/service-branding.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Identidade visual e branding</h3>
+            <p>Uma marca que as pessoas lembram.</p>
+          </div>
+          <div class="service-card beige" aria-hidden="true">
+            <span class="service-icon">
+              <picture><source srcset="img/service-copywriting.webp" type="image/webp"><img src="img/service-copywriting.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Copywriting</h3>
+            <p>Textos que vendem sem parecer que estão vendendo.</p>
+          </div>
+          <div class="service-card brown" aria-hidden="true">
+            <span class="service-icon">
+              <picture><source srcset="img/service-consulting.webp" type="image/webp"><img src="img/service-consulting.png" alt="" width="30" height="30" loading="lazy"></picture>
+            </span>
+            <h3>Consultoria de publicidade</h3>
+            <p>Direção pra quem não sabe por onde começar.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -284,10 +329,6 @@
         <picture class="benefits-accent benefits-accent-mega float-slow">
           <source srcset="img/benefits-megaphone.webp" type="image/webp">
           <img src="img/benefits-megaphone.png" alt="" width="444" height="444" loading="lazy">
-        </picture>
-        <picture class="benefits-accent benefits-accent-fist float-fast">
-          <source srcset="img/benefits-fist.webp" type="image/webp">
-          <img src="img/benefits-fist.png" alt="" width="748" height="600" loading="lazy">
         </picture>
       </div>
 
@@ -337,24 +378,21 @@
           <p>Landing page + copywriting para geração de leads qualificados.</p>
         </article>
       </div>
-      <p class="cases-note center">Novos cases em breve por aqui 👀</p>
     </div>
   </section>
 
   <!-- ============ FAQ ============ -->
   <section class="section faq" id="faq">
-    <div class="container faq-grid">
-      <div class="faq-art reveal" aria-hidden="true">
-        <picture class="faq-illustration float-slow">
+    <div class="container">
+      <h2 class="section-title faq-title">
+        <picture class="faq-detail float-slow" aria-hidden="true">
           <source srcset="img/faq-magnifier.webp" type="image/webp">
           <img src="img/faq-magnifier.png" alt="" width="928" height="817" loading="lazy">
         </picture>
-      </div>
+        Perguntas <span class="text-brown">frequentes</span>
+      </h2>
 
-      <div class="faq-list reveal">
-        <h2 class="section-title">Perguntas <span class="text-brown">frequentes</span></h2>
-
-        <div class="accordion">
+      <div class="accordion reveal">
           <div class="acc-item open">
             <button class="acc-trigger" aria-expanded="true">
               <span>Preciso ter site pronto pra contratar vocês?</span>
@@ -405,7 +443,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -418,11 +455,10 @@
       </picture>
 
       <h2 class="section-title light">
-        Vamos levar<br>
-        <span class="underline-accent">seu negócio</span><br>
+        Vamos levar seu negócio<br>
         para o próximo nível?
       </h2>
-      <p>Preencha o formulário e a gente te chama pra uma conversa <strong>sem compromisso</strong>.</p>
+      <p>Preencha o formulário e a gente te chama<br>para uma conversa <strong>sem compromisso</strong>.</p>
 
       <form class="cta-form" id="ctaForm">
         <div class="form-row">
