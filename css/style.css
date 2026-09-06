@@ -126,6 +126,8 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 
 /* ---------- Section titles ---------- */
 .section { padding: 96px 0; position: relative; }
+.process { padding-bottom: 40px; }
+.services { padding-top: 40px; }
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 3.2vw, 2.6rem);
@@ -267,7 +269,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   justify-content: center;
   /* deixa a ilustração "vazar" pra fora do cartão do hero, dando
      uma sensação de profundidade/3D */
-  margin: -68px -64px -32px 0;
+  margin: 0 -64px -32px 0;
 }
 .hero-illustration img {
   width: min(500px, 100%);
@@ -454,7 +456,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   display: flex;
   width: max-content;
   gap: 22px;
-  padding-inline: 24px;
+  padding: 40px 24px;
   animation: services-scroll 34s linear infinite;
 }
 .services-marquee:hover .services-track { animation-play-state: paused; }
@@ -530,10 +532,17 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .case-card p { font-size: 0.9rem; color: #55604f; padding: 0 20px 22px; }
 
 /* ============ FAQ ============ */
-.faq-title { position: relative; display: inline-block; }
-.faq-detail { position: absolute; top: -8px; left: -58px; width: 46px; display: block; }
-.faq-detail img { width: 100%; height: auto; filter: drop-shadow(0 8px 14px rgba(27,67,48,0.25)); }
-.accordion { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+.faq-body { position: relative; margin-top: 36px; }
+.faq-detail {
+  position: absolute;
+  top: -34px;
+  right: 4%;
+  width: 260px;
+  z-index: 0;
+  display: block;
+}
+.faq-detail img { width: 100%; height: auto; filter: drop-shadow(0 16px 26px rgba(27,67,48,0.3)); }
+.accordion { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; }
 .acc-item {
   background: var(--beige);
   border-radius: var(--radius-md);
