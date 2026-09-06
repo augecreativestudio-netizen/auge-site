@@ -476,12 +476,12 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   gap: 48px;
   align-items: center;
 }
-.benefits-art { position: relative; display: flex; justify-content: center; align-items: center; min-height: 280px; }
+.benefits-art { position: relative; display: flex; justify-content: flex-start; align-items: center; min-height: 280px; padding-left: 4%; }
 .benefits-laptop { width: min(320px, 88%); filter: drop-shadow(0 18px 34px rgba(0,0,0,0.35)); }
 .benefits-laptop img { width: 100%; height: auto; }
 .benefits-accent { position: absolute; }
 .benefits-accent img { width: 100%; height: auto; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.3)); }
-.benefits-accent-mega { top: -10px; right: 4%; width: 92px; }
+.benefits-accent-mega { top: -22px; right: 26%; width: 130px; }
 .benefits-list ul { margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
 .benefits-list li {
   display: flex;
@@ -581,22 +581,19 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 
 /* ============ FINAL CTA ============ */
 .final-cta { text-align: center; padding-top: 90px; }
-.final-cta-inner { max-width: 640px; margin-inline: auto; position: relative; }
-.cta-megaphone {
-  display: block;
-  position: absolute;
-  top: -118px;
-  left: 50%;
-  /* centraliza com margin (não transform) pra não brigar com a
-     animação de flutuar, que já usa transform */
-  margin-left: -75px;
-  width: 150px;
+.final-cta-inner { max-width: 820px; margin-inline: auto; position: relative; }
+.final-cta-title-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
+.cta-megaphone { display: block; width: 130px; flex-shrink: 0; }
 .cta-megaphone img { width: 100%; height: auto; filter: drop-shadow(0 12px 22px rgba(0,0,0,0.35)); }
-.final-cta .section-title { margin-top: 10px; }
-.final-cta p { margin-top: 18px; opacity: 0.88; font-size: 1.05rem; }
+.final-cta .section-title { margin-top: 10px; text-align: left; }
+.final-cta p { max-width: 480px; margin: 18px auto 0; opacity: 0.88; font-size: 1.05rem; }
 
-.cta-form { margin-top: 40px; display: flex; flex-direction: column; gap: 14px; text-align: left; }
+.cta-form { max-width: 480px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 14px; text-align: left; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .cta-form input {
   width: 100%;
@@ -669,7 +666,9 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   .services-track .service-card { flex-basis: 260px; width: 260px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
-  .cta-megaphone { position: static; width: 70px; margin: 0 auto 16px; }
+  .final-cta-title-row { flex-direction: column; gap: 6px; }
+  .final-cta .section-title { text-align: center; }
+  .cta-megaphone { width: 70px; }
   .top-card-wrap { padding: 14px 14px 0; }
   .top-card { border-radius: 28px; }
   .header-inner { padding: 16px 20px; }
