@@ -503,7 +503,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .benefits-list div { font-size: 0.98rem; opacity: 0.92; }
 
 /* ============ PORTFÓLIO ============ */
-.portfolio-intro { max-width: 520px; margin: 14px auto 0; color: #55604f; font-size: 1.02rem; }
+.portfolio-intro { max-width: 520px; margin: 14px auto 0; color: #55604f; font-size: 1.02rem; text-align: center; }
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -530,6 +530,17 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .portfolio-thumb.beige { background: var(--beige); color: var(--brown); }
 .portfolio-thumb.brown { background: var(--brown); color: var(--white); }
 .portfolio-thumb.green { background: var(--green); color: var(--beige); }
+.portfolio-thumb.has-image { padding: 14px; }
+.portfolio-thumb.has-image picture { display: block; height: 100%; }
+.portfolio-thumb.has-image img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.portfolio-thumb.mockup { background: linear-gradient(135deg, #e4dcc0, var(--beige)); }
+.portfolio-thumb.mockup img {
+  border-radius: 8px;
+  box-shadow: 0 12px 20px -6px rgba(27,16,6,0.35);
+  transform: rotate(-5deg);
+  transition: transform .35s var(--ease);
+}
+.portfolio-card:hover .portfolio-thumb.mockup img { transform: rotate(-2deg) scale(1.05); }
 .portfolio-tag {
   margin: 16px 18px 0;
   font-size: 0.72rem;
