@@ -502,34 +502,55 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .check img { width: 16px; height: 16px; }
 .benefits-list div { font-size: 0.98rem; opacity: 0.92; }
 
-/* ============ CASES ============ */
-.cases-track {
+/* ============ PORTFÓLIO ============ */
+.portfolio-intro { max-width: 520px; margin: 14px auto 0; color: #55604f; font-size: 1.02rem; }
+.portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
   margin-top: 44px;
 }
-.case-card {
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--white);
   border: 1px solid rgba(27,67,48,0.1);
   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
-.case-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
-.case-thumb {
-  height: 160px;
-  background: linear-gradient(135deg, var(--beige), var(--beige-dark));
-  position: relative;
-  overflow: hidden;
+.portfolio-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.portfolio-thumb {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-.case-thumb::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(45deg, rgba(167,95,30,0.08) 0 12px, transparent 12px 24px);
+.portfolio-thumb.beige { background: var(--beige); color: var(--brown); }
+.portfolio-thumb.brown { background: var(--brown); color: var(--white); }
+.portfolio-thumb.green { background: var(--green); color: var(--beige); }
+.portfolio-tag {
+  margin: 16px 18px 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--brown);
 }
-.case-card h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.02rem; padding: 20px 20px 6px; color: var(--green); }
-.case-card p { font-size: 0.9rem; color: #55604f; padding: 0 20px 22px; }
+.portfolio-card h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.02rem; color: var(--green); padding: 6px 18px 0; }
+.portfolio-card p { font-size: 0.9rem; color: #55604f; padding: 6px 18px 18px; flex-grow: 1; }
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 18px 18px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--brown);
+}
+.portfolio-link svg { transition: transform .3s var(--ease); }
+.portfolio-link:hover svg { transform: translateX(3px); }
 
 /* ============ FAQ ============ */
 .faq-body { position: relative; margin-top: 36px; }
@@ -646,7 +667,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   .badges-row { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .benefits-art { order: -1; }
-  .cases-track { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .faq-detail { display: none; }
   .timeline-step { grid-template-columns: 40px 1fr 30px; }
   .step-desc { grid-column: 1 / -1; padding-left: 58px; }
@@ -666,7 +687,7 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 760px) {
   .section { padding: 64px 0; }
-  .cards-grid.four, .cases-track { grid-template-columns: 1fr; }
+  .cards-grid.four, .portfolio-grid { grid-template-columns: 1fr; }
   .services-track .service-card { flex-basis: 260px; width: 260px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
