@@ -533,9 +533,9 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .portfolio-thumb.has-image { padding: 14px; }
 .portfolio-thumb.has-image picture { display: block; height: 100%; }
 .portfolio-thumb.has-image img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
-.portfolio-thumb.video-poster { padding: 0; }
-.portfolio-thumb.video-poster picture { display: block; width: 100%; height: 100%; }
-.portfolio-thumb.video-poster img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: center 22%; }
+.portfolio-thumb.fill { padding: 0; }
+.portfolio-thumb.fill picture { display: block; width: 100%; height: 100%; }
+.portfolio-thumb.fill img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: center 22%; }
 .portfolio-play-badge {
   position: absolute;
   top: 50%; left: 50%;
