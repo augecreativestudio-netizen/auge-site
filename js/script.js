@@ -75,7 +75,6 @@
 
     const svgArrowLeft = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     const svgArrowRight = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    const svgExternal = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     const svgPending = '<svg width="40" height="40" viewBox="0 0 48 48" fill="none"><rect x="6" y="12" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2.2"/><path d="M18 22l9 6-9 6V22Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>';
 
     function renderGalleryFrame() {
@@ -90,7 +89,7 @@
       let html = "";
 
       if (type === "image") {
-        html += `<div class="lightbox-media-wrap"><img src="${data.src}" alt="${data.title || ""}"></div>`;
+        html += `<div class="lightbox-media-wrap"><img src="${data.src}" alt=""></div>`;
       } else if (type === "video") {
         html += `<div class="lightbox-media-wrap"><video src="${data.src}" controls autoplay playsinline></video></div>`;
       } else if (type === "gallery") {
@@ -105,16 +104,7 @@
           </div>`;
         }
       } else if (type === "pending") {
-        html += `<div class="lightbox-pending">
-          ${svgPending}
-          <strong>${data.title || "Prévia a caminho"}</strong>
-          <p>${data.desc || "Esse material ainda não foi encaixado no site. Manda o arquivo direto aqui no chat que a gente coloca."}</p>
-          ${data.link ? `<a href="${data.link}" target="_blank" rel="noopener">${data.linkLabel || "Ver link"} ${svgExternal}</a>` : ""}
-        </div>`;
-      }
-
-      if (data.title && type !== "pending") {
-        html += `<div class="lightbox-caption"><strong>${data.title}</strong>${data.desc ? `<span>${data.desc}</span>` : ""}${data.link ? `<br><a href="${data.link}" target="_blank" rel="noopener">${data.linkLabel || "Ver link"} ${svgExternal}</a>` : ""}</div>`;
+        html += `<div class="lightbox-pending">${svgPending}</div>`;
       }
 
       stage.innerHTML = html;
@@ -141,10 +131,6 @@
       const data = {
         type: trigger.dataset.lightbox,
         src: trigger.dataset.lbSrc,
-        title: trigger.dataset.lbTitle,
-        desc: trigger.dataset.lbDesc,
-        link: trigger.dataset.lbLink,
-        linkLabel: trigger.dataset.lbLinkLabel,
         images: trigger.dataset.lbImages ? JSON.parse(trigger.dataset.lbImages) : null,
       };
       buildStage(data);
