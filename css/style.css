@@ -660,22 +660,9 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.site-mock-body {
-  flex: 1;
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.site-mock-line { height: 5px; border-radius: 3px; background: rgba(27,67,48,0.15); }
-.site-mock-line.w60 { width: 55%; }
-.site-mock-line.w40 { width: 35%; }
-.site-mock-block {
-  flex: 1;
-  margin-top: 3px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, rgba(167,95,30,0.2), rgba(27,67,48,0.12));
-}
+.site-mock-shot { flex: 1; overflow: hidden; display: block; }
+.site-mock-shot picture { display: block; width: 100%; height: 100%; }
+.site-mock-shot img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: top center; }
 
 /* ============ LIGHTBOX ============ */
 .lightbox {
