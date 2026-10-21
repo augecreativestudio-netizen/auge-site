@@ -91,7 +91,7 @@
       if (type === "image") {
         html += `<div class="lightbox-media-wrap"><img src="${data.src}" alt=""></div>`;
       } else if (type === "video") {
-        html += `<div class="lightbox-media-wrap"><video src="${data.src}" controls autoplay playsinline></video></div>`;
+        html += `<div class="lightbox-media-wrap"><video src="${data.src}" poster="${data.poster || ""}" controls autoplay playsinline></video></div>`;
       } else if (type === "gallery") {
         galleryImages = data.images;
         galleryIndex = 0;
@@ -131,6 +131,7 @@
       const data = {
         type: trigger.dataset.lightbox,
         src: trigger.dataset.lbSrc,
+        poster: trigger.dataset.lbPoster,
         images: trigger.dataset.lbImages ? JSON.parse(trigger.dataset.lbImages) : null,
       };
       buildStage(data);
