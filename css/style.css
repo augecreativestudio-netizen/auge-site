@@ -563,6 +563,207 @@ html.js .reveal.in-view { opacity: 1; transform: translateY(0); }
 .portfolio-link svg { transition: transform .3s var(--ease); }
 .portfolio-link:hover svg { transform: translateX(3px); }
 
+/* clickable thumb (button) */
+.portfolio-thumb.clickable {
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+}
+.portfolio-view-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: rgba(27,67,48,0.6);
+  color: var(--beige);
+  font-size: 0.82rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .3s var(--ease);
+}
+.portfolio-thumb.clickable:hover .portfolio-view-hint,
+.portfolio-thumb.clickable:focus-visible .portfolio-view-hint { opacity: 1; }
+.portfolio-view-hint svg { transition: transform .3s var(--ease); }
+.portfolio-thumb.clickable:hover .portfolio-view-hint svg { transform: scale(1.12); }
+
+.portfolio-badge {
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 2;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--brown);
+  color: var(--white);
+}
+
+/* Sementinhas: fundo próprio, tons extraídos da logo (verdes + bege terroso) */
+.portfolio-thumb.sementinhas-bg {
+  background: linear-gradient(135deg, #eef2e2 0%, #dbe6c6 55%, #c9dba8 100%);
+}
+
+/* "mockup" de site: barra de navegador falsa + miniatura de layout,
+   até termos um print real pra encaixar no lugar */
+.portfolio-thumb.site-mock {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  background: var(--beige-dark);
+}
+.site-mock-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  background: #ded2a8;
+  flex-shrink: 0;
+}
+.site-mock-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(27,67,48,0.28); }
+.site-mock-url {
+  margin-left: 6px;
+  font-size: 0.58rem;
+  background: var(--white);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  color: #55604f;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.site-mock-body {
+  flex: 1;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.site-mock-line { height: 5px; border-radius: 3px; background: rgba(27,67,48,0.15); }
+.site-mock-line.w60 { width: 55%; }
+.site-mock-line.w40 { width: 35%; }
+.site-mock-block {
+  flex: 1;
+  margin-top: 3px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(167,95,30,0.2), rgba(27,67,48,0.12));
+}
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  background: rgba(10, 15, 11, 0.96);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s var(--ease), visibility 0s .35s;
+}
+.lightbox.open { opacity: 1; visibility: visible; transition: opacity .35s var(--ease); }
+body.lightbox-locked { overflow: hidden; }
+
+.lightbox-close {
+  position: absolute;
+  top: 22px; right: 24px;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(239,233,211,0.12);
+  color: var(--beige);
+  transition: background-color .25s ease, transform .3s var(--ease);
+}
+.lightbox-close:hover { background: rgba(239,233,211,0.22); transform: rotate(90deg); }
+
+.lightbox-stage {
+  position: relative;
+  max-width: min(880px, 100%);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(.94);
+  transition: transform .35s var(--ease);
+}
+.lightbox.open .lightbox-stage { transform: scale(1); }
+
+.lightbox-media-wrap { display: flex; align-items: center; justify-content: center; max-height: 68vh; }
+.lightbox-media-wrap img, .lightbox-media-wrap video {
+  display: block;
+  max-width: 100%;
+  max-height: 68vh;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.lightbox-caption { margin-top: 20px; text-align: center; color: var(--beige); max-width: 540px; }
+.lightbox-caption strong { font-family: var(--font-display); font-size: 1.25rem; display: block; margin-bottom: 4px; }
+.lightbox-caption span { font-size: 0.92rem; opacity: 0.72; }
+.lightbox-caption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brown-light);
+}
+.lightbox-caption a svg { transition: transform .3s var(--ease); }
+.lightbox-caption a:hover svg { transform: translateX(3px); }
+
+.lightbox-pending {
+  width: min(380px, 100%);
+  padding: 48px 34px;
+  border-radius: var(--radius-lg);
+  background: rgba(239,233,211,0.06);
+  border: 1px dashed rgba(239,233,211,0.28);
+  text-align: center;
+  color: var(--beige);
+}
+.lightbox-pending svg { margin: 0 auto 16px; opacity: 0.65; display: block; }
+.lightbox-pending strong { font-family: var(--font-display); font-size: 1.15rem; display: block; }
+.lightbox-pending p { font-size: 0.9rem; opacity: 0.72; margin-top: 10px; }
+.lightbox-pending a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brown-light);
+}
+.lightbox-pending a svg { margin: 0; opacity: 1; display: inline; }
+.lightbox-pending a:hover svg { transform: translateX(3px); }
+
+.lightbox-nav { display: flex; align-items: center; gap: 20px; margin-top: 18px; }
+.lightbox-arrow {
+  width: 38px; height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(239,233,211,0.12);
+  color: var(--beige);
+  transition: background-color .25s ease, transform .2s var(--ease);
+}
+.lightbox-arrow:hover { background: rgba(239,233,211,0.24); }
+.lightbox-dots { display: flex; gap: 8px; }
+.lightbox-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(239,233,211,0.3); transition: background-color .25s ease, transform .25s ease; padding: 0; }
+.lightbox-dot.active { background: var(--beige); transform: scale(1.35); }
+
 /* ============ FAQ ============ */
 .faq-body { position: relative; margin-top: 36px; }
 .faq-detail {
